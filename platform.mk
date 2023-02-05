@@ -14,12 +14,15 @@
 # limitations under the License.
 #
 
-PLATFORM_PATH := device/samsung/exynos9820-common
+PLATFORM_PATH := device/samsung/exynos9825-common
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
+### PROPRIETARY VENDOR FILES
+$(call inherit-product, vendor/samsung/exynos9825-common/exynos9825-common-vendor.mk)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
